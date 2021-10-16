@@ -1,0 +1,403 @@
+@charset "UTF-8";
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+body {
+  background: #1f2122;
+  padding: 25px;
+  /* padding-top: 40px; */
+  color: #fff;
+  font-family: "Roboto", "Helvetica", Arial, sans-serif;
+  margin: 0;
+}
+
+.carousel {
+  position: relative;
+
+  /* width: 100%; */
+  height: 95vh;
+
+  overflow: hidden;
+  background: #1f2122;
+}
+.carousel .slide {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: left 0.5s ease-in-out;
+}
+.carousel input[type="radio"] {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.carousel input[type="radio"]:checked + .dot {
+  border: 3px solid #0091ea;
+  background: none;
+}
+.carousel .dot {
+  cursor: pointer;
+  text-indent: -99999px;
+  overflow: hidden;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: #1f2122;
+  background: #0091ea;
+  box-sizing: border-box;
+  border-radius: 100%;
+  position: relative;
+  z-index: 100;
+  top: 90vh;
+
+  transition: 0.3s linear;
+  /* left: 500px; */
+  /* float:inherit; */
+}
+.carousel .dot:hover {
+  background: #fff;
+  border: #fff;
+  transition: 0.3s linear;
+}
+.carousel .arrow {
+  cursor: pointer;
+  position: absolute;
+  z-index: 100;
+  display: none;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+}
+
+.carousel #slide-1:checked ~ .slides li.slide-1 {
+  left: 0;
+  z-index: 2;
+}
+.carousel #slide-1:checked ~ .slides li.slide-2 {
+  left: -100%;
+  opacity: 0;
+}
+.carousel #slide-1:checked ~ .slides li.slide-3 {
+  top: -1000%;
+}
+.carousel #slide-1:checked ~ .slides li.slide-4 {
+  top: -1000%;
+}
+.carousel #slide-1:checked ~ .slides li.slide-5 {
+  left: 100%;
+  opacity: 0;
+}
+.carousel #slide-1:checked ~ .arrow.slide-5,
+.carousel #slide-1:checked ~ .arrow.slide-2 {
+  display: block;
+}
+.carousel #slide-1:checked ~ .arrow.slide-5 {
+  left: 0;
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0);
+  height: 30px;
+}
+.carousel #slide-1:checked ~ .arrow.slide-5:before {
+  content: "";
+  font-family: "FontAwesome", sans-serif;
+  font-size: 30px;
+  color: white;
+  position: absolute;
+  left: 10px;
+}
+.carousel #slide-1:checked ~ .arrow.slide-2 {
+  right: 0;
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0);
+  height: 30px;
+}
+.carousel #slide-1:checked ~ .arrow.slide-2:before {
+  content: "";
+  font-family: "FontAwesome", sans-serif;
+  font-size: 30px;
+  color: white;
+  position: absolute;
+  right: 10px;
+}
+
+.carousel #slide-2:checked ~ .slides li.slide-1 {
+  left: 100%;
+  opacity: 0;
+}
+.carousel #slide-2:checked ~ .slides li.slide-2 {
+  left: 0;
+  z-index: 2;
+}
+.carousel #slide-2:checked ~ .slides li.slide-3 {
+  left: -100%;
+  opacity: 0;
+}
+.carousel #slide-2:checked ~ .slides li.slide-4 {
+  top: -1000%;
+}
+.carousel #slide-2:checked ~ .slides li.slide-5 {
+  top: -1000%;
+}
+.carousel #slide-2:checked ~ .arrow.slide-1,
+.carousel #slide-2:checked ~ .arrow.slide-3 {
+  display: block;
+}
+.carousel #slide-2:checked ~ .arrow.slide-1 {
+  left: 0;
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0);
+  height: 30px;
+}
+.carousel #slide-2:checked ~ .arrow.slide-1:before {
+  content: "";
+  font-family: "FontAwesome", sans-serif;
+  font-size: 30px;
+  color: white;
+  position: absolute;
+  left: 10px;
+}
+.carousel #slide-2:checked ~ .arrow.slide-3 {
+  right: 0;
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0);
+  height: 30px;
+}
+.carousel #slide-2:checked ~ .arrow.slide-3:before {
+  content: "";
+  font-family: "FontAwesome", sans-serif;
+  font-size: 30px;
+  color: white;
+  position: absolute;
+  right: 10px;
+}
+
+.carousel #slide-3:checked ~ .slides li.slide-1 {
+  top: -1000%;
+}
+.carousel #slide-3:checked ~ .slides li.slide-2 {
+  left: 100%;
+  opacity: 0;
+}
+.carousel #slide-3:checked ~ .slides li.slide-3 {
+  left: 0;
+  z-index: 2;
+}
+.carousel #slide-3:checked ~ .slides li.slide-4 {
+  left: -100%;
+  opacity: 0;
+}
+.carousel #slide-3:checked ~ .slides li.slide-5 {
+  top: -1000%;
+}
+.carousel #slide-3:checked ~ .arrow.slide-2,
+.carousel #slide-3:checked ~ .arrow.slide-4 {
+  display: block;
+}
+.carousel #slide-3:checked ~ .arrow.slide-2 {
+  left: 0;
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0);
+  height: 30px;
+}
+.carousel #slide-3:checked ~ .arrow.slide-2:before {
+  content: "";
+  font-family: "FontAwesome", sans-serif;
+  font-size: 30px;
+  color: white;
+  position: absolute;
+  left: 10px;
+}
+.carousel #slide-3:checked ~ .arrow.slide-4 {
+  right: 0;
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0);
+  height: 30px;
+}
+.carousel #slide-3:checked ~ .arrow.slide-4:before {
+  content: "";
+  font-family: "FontAwesome", sans-serif;
+  font-size: 30px;
+  color: white;
+  position: absolute;
+  right: 10px;
+}
+
+.carousel #slide-4:checked ~ .slides li.slide-1 {
+  top: -1000%;
+}
+.carousel #slide-4:checked ~ .slides li.slide-2 {
+  top: -1000%;
+}
+.carousel #slide-4:checked ~ .slides li.slide-3 {
+  left: 100%;
+  opacity: 0;
+}
+.carousel #slide-4:checked ~ .slides li.slide-4 {
+  left: 0;
+  z-index: 2;
+}
+.carousel #slide-4:checked ~ .slides li.slide-5 {
+  left: -100%;
+  opacity: 0;
+}
+.carousel #slide-4:checked ~ .arrow.slide-3,
+.carousel #slide-4:checked ~ .arrow.slide-5 {
+  display: block;
+}
+.carousel #slide-4:checked ~ .arrow.slide-3 {
+  left: 0;
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0);
+  height: 30px;
+}
+.carousel #slide-4:checked ~ .arrow.slide-3:before {
+  content: "";
+  font-family: "FontAwesome", sans-serif;
+  font-size: 30px;
+  color: white;
+  position: absolute;
+  left: 10px;
+}
+.carousel #slide-4:checked ~ .arrow.slide-5 {
+  right: 0;
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0);
+  height: 30px;
+}
+.carousel #slide-4:checked ~ .arrow.slide-5:before {
+  content: "";
+  font-family: "FontAwesome", sans-serif;
+  font-size: 30px;
+  color: white;
+  position: absolute;
+  right: 10px;
+}
+
+.carousel #slide-5:checked ~ .slides li.slide-1 {
+  left: -100%;
+  opacity: 0;
+}
+.carousel #slide-5:checked ~ .slides li.slide-2 {
+  top: -1000%;
+}
+.carousel #slide-5:checked ~ .slides li.slide-3 {
+  top: -1000%;
+}
+.carousel #slide-5:checked ~ .slides li.slide-4 {
+  left: 100%;
+  opacity: 0;
+}
+.carousel #slide-5:checked ~ .slides li.slide-5 {
+  left: 0;
+  z-index: 2;
+}
+.carousel #slide-5:checked ~ .arrow.slide-4,
+.carousel #slide-5:checked ~ .arrow.slide-1 {
+  display: block;
+}
+.carousel #slide-5:checked ~ .arrow.slide-4 {
+  left: 0;
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0);
+  height: 30px;
+}
+.carousel #slide-5:checked ~ .arrow.slide-4:before {
+  content: "";
+  font-family: "FontAwesome", sans-serif;
+  font-size: 30px;
+  color: white;
+  position: absolute;
+  left: 10px;
+}
+.carousel #slide-5:checked ~ .arrow.slide-1 {
+  right: 0;
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0);
+  height: 30px;
+}
+.carousel #slide-5:checked ~ .arrow.slide-1:before {
+  content: "";
+  font-family: "FontAwesome", sans-serif;
+  font-size: 30px;
+  color: white;
+  position: absolute;
+  right: 10px;
+}
+
+.carousel .dot.slide-6 {
+  left: 85.5vw;
+}
+.carousel .dot.slide-5 {
+  left: 85vw;
+}
+.carousel .dot.slide-4 {
+  left: 84.5vw;
+}
+.carousel .dot.slide-3 {
+  left: 84vw;
+}
+.carousel .dot.slide-2 {
+  left: 83.5vw;
+}
+.carousel .dot.slide-1 {
+  left: 83vw;
+}
+.carousel img {
+  width: 100%;
+  margin-top: -200px;
+}
+.background {
+  position: relative;
+  top: 79vh;
+  /* bottom: -10vh; */
+  /* border-bottom: 10px solid rgb(240, 0, 0);; */
+  width: 100%;
+  height: 100px;
+  background-color: #1f2122;
+
+  z-index: 120;
+}
+
+.slide_text {
+  position: relative;
+  top: 86vh;
+  /* left: 1vw; */
+  z-index: 150;
+  font-size: 24px;
+}
+@media (max-width: 320px) {
+  .slide_text {
+    top: 35vh;
+    font-size: 14px;
+  }
+  .carousel .dot.slide-6 {
+    left: 6vw;
+    
+  }
+  .carousel .dot.slide-5 {
+    left: 5vw;
+  }
+  .carousel .dot.slide-4 {
+    left: 4vw;
+  }
+  .carousel .dot.slide-3 {
+    left: 3vw;
+  }
+  .carousel .dot.slide-2 {
+    left: 2vw;
+  }
+  .carousel .dot.slide-1 {
+    left: 1vw;
+   
+  }
+  .carousel .dot {
+    
+    top: 32vh;
+    width: 10px;
+    height: 10px;
+  }
+}
